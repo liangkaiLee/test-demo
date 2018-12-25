@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function fn(a, b){
+			console.log(this);
+			console.log(a+b);
+		}
+		fn(5, 10);
+
+		// bind()	改变函数的this, 并且返回一个新的函数(不调用函数)
+		// bind()	括号中的第一个参数是fn函数中this的指向，想要this 指向谁就传谁
+		// 后面的参数就是函数调用时传入的实参
+		var obj = {
+			name: '张无忌',
+			age: 26,
+		}
+		var f = fn.bind(obj, 10, 15);
+		f();
+
+		// call()	改变函数中的this, 并且直接调用函数
+		fn.call(obj, 12, 23);
+	</script>
+</body>
+</html>

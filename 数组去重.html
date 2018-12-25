@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var arr = [23,45,57,89,34,57,23,57,96,74,57,23,89,96];
+		var arr1 = Array.from(new Set(arr));
+		console.log(arr1);
+
+		var newArr = Array.from(new Set(arr));
+		console.log(newArr);
+
+
+
+		var arr2 = [43,57,34,78,34,57,34,43,34,78,89,67,89];
+		var arr3 = [...new Set(arr2)];
+		console.log(arr3);
+	</script>
+</body>
+</html>

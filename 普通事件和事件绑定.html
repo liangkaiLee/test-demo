@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="点击" id="btn">
+	<div id="dv"></div>
+
+	<script>
+		// 普通事件
+		// var btn = document.getElementById('btn');
+		// btn.onclick = function(){
+		// 	alert('你好像很拽哦');
+		// }
+		// btn.onclick = function(){
+		// 	alert('你再拽一个试试');
+		// }
+
+
+		// 事件绑定
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click', function(){
+			alert('你好像很拽哦');
+		})
+		btn.addEventListener('click', function(){
+			alert('你再拽一个试试');
+		})
+	</script>
+</body>
+</html>
